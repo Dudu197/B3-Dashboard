@@ -3,7 +3,7 @@ import Dashboard from './Dashboard.js';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Container } from 'react-bootstrap';
+import { Container, Tabs, Tab } from 'react-bootstrap';
 
 
 function App() {
@@ -11,7 +11,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Container fluid>
-          <Dashboard />
+          <Tabs defaultActiveKey="ibov" id="uncontrolled-tab-example">
+            <Tab eventKey="ibov" title="ibov">
+              <Dashboard indicator='BOVA11' file='ibov.json' />
+            </Tab>
+            <Tab eventKey="ifix" title="ifix">
+              <Dashboard indicator='BOVA11' file='ifix.json' />
+            </Tab>
+          </Tabs>
         </Container>
       </header>
     </div>

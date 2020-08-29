@@ -1,29 +1,35 @@
 import React from 'react';
 import Segment from './Segment.js';
 
-import data from './mean_t.json';
-
-import { Row, Col, Card, Select } from 'react-bootstrap';
+import { Row, Col, Card } from 'react-bootstrap';
 
 
 class Dashboard extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
-    this.state = { filter: 'percent_hoje', keys: Object.keys(data), listItems: [] };
+    let data = require('./' + props.file);
+
+    this.state = {
+      filter: 'percent_hoje',
+      data: data,
+      keys: Object.keys(data),
+      listItems: []
+    };
 
     this.sortData = this.sortData.bind(this);
     this.handleChangeFilter = this.handleChangeFilter.bind(this);
   }
 
   sortData(column){
+    let data = this.state.data;
     this.state.keys.sort(function(a, b) {
-        return data[b][column] - data[a][column];
+      return data[b][column] - data[a][column];
     });
     let listItems = this.state.keys.map((key) =>
       <Col md={6} key={key}>
-        <Segment name={key} segment={data[key]} />
+        <Segment name={key} segment={this.state.data[key]} />
       </Col>
     );
     this.setState({listItems: listItems});
@@ -43,7 +49,7 @@ class Dashboard extends React.Component {
       <div>
         <Row>
           <Col>
-            <Segment name='BOVA11' segment={data['BOVA11']} />
+            <Segment name={this.props.indicator} segment={this.state.data[this.props.indicator]} />
           </Col>
           <Col>
             <Card>
