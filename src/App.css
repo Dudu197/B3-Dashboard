@@ -24,6 +24,11 @@
   color: white;
 }
 
+.App-header .card {
+  color: black;
+  margin-bottom: 15px;
+}
+
 .App-link {
   color: #61dafb;
 }
