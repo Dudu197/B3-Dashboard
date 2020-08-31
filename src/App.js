@@ -15,6 +15,9 @@ function App() {
             <Tab eventKey="ibov" title="ibov">
               <Dashboard indicator='BOVA11' file='ibov.json' />
             </Tab>
+            <Tab eventKey="b3" title="b3">
+              <Dashboard indicator='BOVA11' file='b3.json' />
+            </Tab>
             <Tab eventKey="ifix" title="ifix">
               <Dashboard indicator='BOVA11' file='ifix.json' />
             </Tab>
