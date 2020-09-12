@@ -13,13 +13,13 @@ function App() {
         <Container fluid>
           <Tabs defaultActiveKey="ibov" id="uncontrolled-tab-example">
             <Tab eventKey="ibov" title="ibov">
-              <Dashboard indicator='BOVA11' file='ibov.json' />
+              <Dashboard indicator='BOVA11.SA' file='ibov.json' />
             </Tab>
             <Tab eventKey="b3" title="b3">
-              <Dashboard indicator='BOVA11' file='b3.json' />
+              <Dashboard indicator='BOVA11.SA' file='b3.json' />
             </Tab>
             <Tab eventKey="ifix" title="ifix">
-              <Dashboard indicator='BOVA11' file='ifix.json' />
+              <Dashboard indicator='IFIX.SA' file='ifix.json' />
             </Tab>
           </Tabs>
         </Container>
