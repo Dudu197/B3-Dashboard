@@ -20,7 +20,7 @@ class Segment extends React.Component {
           </Row>
           <Row>
             <Col>A: R${this.props.segment.inicio_ano} ({this.props.segment.percent_ano}%)</Col>
-            <Col>P/PV: R${this.props.segment['P/VP']}</Col>
+            <Col>P/PV: {this.props.segment['P/VP']}</Col>
           </Row>
         </Card.Body>
       </Card>
