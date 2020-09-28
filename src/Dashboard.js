@@ -62,7 +62,7 @@ class Dashboard extends React.Component {
                   <option value="percent_tres_meses">3 Mêses</option>
                   <option value="percent_seis_meses">6 Mêses</option>
                   <option value="percent_ano">Ano</option>
-                  <option value="P/VPA">P/VPA</option>
+                  <option value="P/VP">P/VP</option>
                 </select>
               </Card.Body>
             </Card>
