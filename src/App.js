@@ -21,6 +21,9 @@ function App() {
             <Tab eventKey="ifix" title="ifix">
               <Dashboard indicator='IFIX.SA' file='ifix.json' />
             </Tab>
+            <Tab eventKey="cripto" title="cripto">
+              <Dashboard indicator='BTC' file='cripto.json' />
+            </Tab>
           </Tabs>
         </Container>
       </header>
